@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Y2K Revival Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 bg-black border-b border-gray-700">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <!-- Logo -->
+        <a href="./index.html" class="text-3xl font-black uppercase tracking-wide text-white">
+            Revival Shop
+        </a>
+
+        <!-- Menú -->
+        <div id="menu" class="hidden sm:flex space-x-8 text-lg">
+            <!-- Aquí se inyectarán dinámicamente los enlaces -->
+        </div>
+
+        <!-- Botón del menú móvil -->
+        <button id="menu-toggle" class="sm:hidden text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+</nav>
+
+
+
+<!-- Login Section -->
+<section class="flex items-center justify-center h-[90vh]">
+    <div class="bg-gray-800 p-8 rounded-md shadow-lg w-full max-w-md">
+        <h1 class="text-3xl font-bold mb-6 text-center uppercase tracking-wide">Iniciar Sesión</h1>
+        <form id="loginForm" class="space-y-6">
+            <div>
+                <label for="username" class="block text-sm font-medium">Usuario</label>
+                <input type="text" id="username" name="username" class="w-full p-3 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-gray-500" placeholder="Tu usuario" required>
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium">Contraseña</label>
+                <input type="password" id="password" name="password" class="w-full p-3 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-gray-500" placeholder="Tu contraseña" required>
+            </div>
+            <button type="submit" class="w-full py-3 bg-gray-100 text-black font-bold uppercase tracking-wide hover:bg-gray-200">Iniciar Sesión</button>
+        </form>
+        <p class="mt-6 text-center text-sm text-gray-400">
+            ¿No tienes cuenta? <a href="register.html" class="text-gray-100 underline">Regístrate aquí</a>
+        </p>
+    </div>
+</section>
+
+<script src="js/nav.js" defer></script>
+<script src="js/login.js" defer></script>
+</body>
+</html>

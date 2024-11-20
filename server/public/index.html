@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Y2K Revival Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fuente estilo editorial */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Animaciones */
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+<!-- Sticky Navbar -->
+<nav class="sticky top-0 z-50 bg-black border-b border-gray-700">
+  <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <a href="./index.html" class="text-3xl font-black uppercase tracking-wide text-white">
+      Revival Shop
+    </a>
+    <div id="menu" class="hidden sm:flex space-x-8 text-lg">
+      <!-- Aquí se inyectarán dinámicamente los enlaces -->
+    </div>
+    <button id="menu-toggle" class="sm:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<script src="./js/nav.js" defer></script>
+
+<!-- Hero Section -->
+<header class="relative h-[90vh] fade-in">
+  <img src="/img/img_1.png" alt="Thrift Shop Hero" class="w-full h-full object-cover opacity-80">
+  <div class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-black via-transparent to-black">
+    <h1 class="text-6xl font-extrabold uppercase tracking-tight text-center text-gray-100">
+      Se parte del <br> <span class="text-gray-400">Revival</span>
+    </h1>
+    <p class="mt-6 text-xl tracking-wide text-gray-300">El mejor estilo Y2K al alcance de tus manos</p>
+    <button class="mt-8 px-6 py-3 bg-gray-400 text-white font-bold uppercase tracking-wide hover:bg-pink-600 transition">
+      Explorar Ahora
+    </button>
+  </div>
+</header>
+
+<!-- Latest Products Section -->
+<main class="container mx-auto px-4 py-16">
+  <section id="latest-products">
+    <h2 class="text-4xl font-bold mb-10 text-center uppercase tracking-wider text-gray-100">
+      Productos Destacados
+    </h2>
+    <ul id="product-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+      <!-- Productos cargados dinámicamente -->
+    </ul>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-black border-t border-gray-700 text-center py-6">
+  <p class="text-gray-500 text-sm uppercase tracking-wide">&copy; 2024 Y2K Revival Shop. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
+<script src="./js/products.js" defer></script>
